@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  /* width: 100%; */
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
+.view-row {
+  display: flex;
+  min-height: 350px;
+}
+
+.row-left {
+  padding: 15px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+img {
+  width: 100%;
+}
+
+.row-right {
+  padding: 30px 15px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 3rem;
+  color: #616a74;
+  width: 70%;
+}
+.title::first-line {
+  color: #ff7900;
+}
+li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px;
+}
+ul li::before {
+  content: "\25CB";
+  font-size: 20px;
+  color: #ff7900;
+  font-weight: 800;
+  display: inline-block;
+  width: 1em;
+  height: 30px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.explore-btn {
+  border: 1.5px solid #ff7900;
+  width: min-content;
+  padding: 10px 35px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+@media screen and (max-device-width: 650px) {
+  * {
+    font-size: 15px;
+  }
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-device-width: 500px) {
+  * {
+    font-size: 14px;
+  }
+  .title {
+    width: auto;
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px auto;
+  }
+
+  .view-row {
+    flex-direction: column;
+    margin: auto;
+  }
+  .row-left,
+  .row-right {
+    width: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  .view-row:nth-child(even) {
+    flex-direction: column-reverse;
+  }
+  .explore-btn {
+    margin: 20px auto;
+  }
+
+}
+
+/* for loader section */
+.content{
+  display: none;
+}
+
+.loader{
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #16191e;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.loader>div{
+    height: 100px;
+    width: 100px;
+    border: 15px solid #45474b; 
+    border-top-color: #2a88e6;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    animation: spin 1.5s infinite linear;
+}
+
+@keyframes spin{
+    
+    100%{
+    transform: rotate(360deg);
+    }
+}
