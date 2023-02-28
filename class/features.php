@@ -56,12 +56,32 @@
    * 
    **/
     class features {
+      /**
+       * @var $name
+       *  Store name off the user.
+       */
       public $name;
+      /**
+       * @var $mailId
+       *  Store mailId off the user.
+       */
       public $mailId;
+      /**
+       * @var $marks
+       *  Store marks off the user.
+       */
       public $marks;
+      /**
+       * @var $phoneNo
+       *  Store phone number off the user.
+       */
       public $phoneNo;
+      /**
+       * @var $imagePath
+       *  Store path of the image off the user.
+       */
       public $imagePath;
-
+      
       // String methods here 
 
       /** 
