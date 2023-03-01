@@ -18,7 +18,7 @@
 <body>
     <?php
     // Instantiating feature class object to get all required methods.
-    $feature = new features();
+    $feature = new Features();
     if ($feature->validMailId($_POST['mailId'])) {
         $feature->sendMail($_POST['mailId'], "SUBJECT: PHP_MAILER", "Thank you for your submission.");
 
